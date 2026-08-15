@@ -4,16 +4,15 @@ Submitting Issues
 If you are submitting a bug, please create a [jsfiddle](http://jsfiddle.net/) demonstrating the issue.
 Note: Before raising a new issue, please do check the existing issues and make sure your issue doesn’t exist.
 
-
 Read before submitting Pull Requests
 ====================================
 
- * **Pull requests to the `master` branch will be closed.** Please submit all pull requests to the `develop` branch.
- * **You will be required to sign a JS Foundation CLA before your pull request can be merged.** [Sign it right now](https://cla.js.foundation/moment/moment).
- * **Locale translations will not be merged without unit tests.** See [the British English unit tests](https://github.com/moment/moment/blob/develop/src/test/locale/en-gb.js) for an example.
- * **Do not include the minified files in your pull request.** These are
-   `moment.js`, `locale/*.js`, `min/*.js`. Don't worry, we'll build them when
-   we cut a release.
+- **Pull requests to the `master` branch will be closed.** Please submit all pull requests to the `develop` branch.
+- **You will be required to sign a JS Foundation CLA before your pull request can be merged.** [Sign it right now](https://cla.js.foundation/moment/moment).
+- **Locale translations will not be merged without unit tests.** See [the British English unit tests](https://github.com/moment/moment/blob/develop/src/test/locale/en-gb.js) for an example.
+- **Do not include the minified files in your pull request.** These are
+  `moment.js`, `locale/*.js`, `min/*.js`. Don't worry, we'll build them when
+  we cut a release.
 
 Code organization
 =================
@@ -24,10 +23,10 @@ Starting from version 2.10.0 the code is placed under `src/`.
 **DO NOT** submit changes to the generated files. Instead only change
 `src/**/*.js` and run the tests.
 
-* `src/lib/**/*.js` moment core files
-* `src/locale/*.js` locale files
-* `src/test/moment/*.js` moment core tests
-* `src/test/locale/*.js` locale tests
+- `src/lib/**/*.js` moment core files
+- `src/locale/*.js` locale files
+- `src/test/moment/*.js` moment core tests
+- `src/test/locale/*.js` locale tests
 
 We're using ES6 module system, but nothing else ES6, because of performance
 considerations (added code by the transpiler, less than optimal translation to
@@ -69,37 +68,12 @@ Grunt tasks
 
 We use Grunt for managing the build. Here are some useful Grunt tasks:
 
-  * `grunt` The default task lints the code and runs the tests. You should make sure you do this before submitting a PR.
-  * `grunt test` Run the tests.
-  * `grunt lint` Perform syntax and code style checks.
-  * `grunt release` Build everything, including minified files (do not include
-    those in Pull Requests)
-  * `grunt transpile:fr,ru` Build custom locale bundles `moment-with-locales.custom.js` and `locales.custom.js` inside `build/umd/min` containing just French and Russian.
-  * `grunt size` Print size statistics.
+- `grunt` The default task lints the code and runs the tests. You should make sure you do this before submitting a PR.
+- `grunt test` Run the tests.
+- `grunt lint` Perform syntax and code style checks.
+- `grunt release` Build everything, including minified files (do not include
+  those in Pull Requests)
+- `grunt transpile:fr,ru` Build custom locale bundles `moment-with-locales.custom.js` and `locales.custom.js` inside `build/umd/min` containing just French and Russian.
+- `grunt size` Print size statistics.
 
-**Note:** If the prompt message is `Code style issues found in the above file(s). Forgot to run Prettier?`, Please run `npm run prettier-fmt`. 
-
-Becoming a moment team member
-=============================
-
-Moment's team members have extra powers and responsibilities. If you want to
-become one -- be active in our repositories by answering issues, reviewing PRs,
-discussing changes, submitting PRs for open bugs. Any help on
-[moment/moment](https://github.com/moment/moment),
-[moment/momentjs.com](https://github.com/moment/momentjs.com),
-[moment/moment-timezone](https://github.com/moment/moment-timezone) will be
-noticed.
-
-Once you've proven to be trustworthy, submit your request to the
-[gitter chat](https://gitter.im/moment/moment), and it will be reviewed by the
-existing team.
-
-Once you become a member:
-* you can tell your friends
-* you can close issues submitted by others
-
-But also:
-* be active in the repositories
-* pick up work nobody else wants to
-* attend a monthly meeting
-* participate in the internal slack group
+**Note:** If the prompt message is `Code style issues found in the above file(s). Forgot to run Prettier?`, Please run `npm run prettier-fmt`.
